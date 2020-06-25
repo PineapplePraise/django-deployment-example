@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
+<!DOCTYPE html>
+{% extends "basic_app/base.html"%}
+  {% block body_block %}
+    <div id="url-jumbo" class="jumbotron">
+      <h1><img id="hubimg" src="https://pilbox.themuse.com/image.png?h=250&url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F1409%2Fsmall_logo.png%3Fv%3Df23e34c49aae9408f9988e6e349a40792e005fb7cbe4e949f3ae3450e61ae853" alt=""> for URLS</h1>
+      <a class="btn btn-primary btn-lg" href="{% url 'basic_app:other' %}">Other Page</a>
+      <a class="btn btn-primary btn-lg" href="{% url 'admin:index' %}">Admin Page</a>
+      <a class="btn btn-primary btn-lg" href="{% url 'index' %}">index homepage</a>
+    </div>
+    <style media="all">
+    #hubimg{
+      width:150px;
+    }
+    #url-jumbo{
+      margin-top: 50px;
+      width:700px
+    }
+  {% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html"%}
+  {% block body_block %}
+    <div id="index-jumbo" class="jumbotron">
+      <div id="underdev"class="alert alert-secondary" role="alert">
+        NOTICE: This website is new. It is in construction and various stages of development.
+      </div>
+      <h1 class="display-4">Welcome to my website</h1>
+      <p class="lead">This is the index.html homepage</p>
+      <hr class="my-4">
+      <p>Click the button to visit the url hub</p>
+      <a class="btn btn-primary btn-lg" href="{% url 'basic_app:relative' %}" role="button">url hub</a>
+    </div>
+
+    <style media="screen">
+    #index-jumbo{
+      margin-top:50px;
+      width:800px;
+      border:20px;
+    }
+    </style>
+  {% endblock %}
